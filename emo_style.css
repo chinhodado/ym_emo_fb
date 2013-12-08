@@ -1,0 +1,42 @@
+.myemo
+{
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.laughing
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/laughing.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.rolling
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/rolling.gif);
+    width: 27px;
+    height: 15px;
+}
+
+.ohgoon
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/ohgoon.gif);
+    width: 23px;
+    height: 16px;
+}
+
+.hehe
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/hehe.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.crying
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/crying.gif);
+    width: 20px;
+    height: 15px;
+}
