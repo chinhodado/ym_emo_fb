@@ -48,8 +48,7 @@ function handleText(textNode) {
         textNode.nodeValue = textNode.nodeValue.replace(/:-j/g, ohgoon);
         var newSpan = document.createElement('span');
         newSpan.innerHTML = textNode.nodeValue;
-        parent.appendChild(newSpan);
-        textNode.parentNode.removeChild(textNode);
+        parent.replaceChild(newSpan, textNode);
     }
 }
 
