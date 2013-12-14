@@ -48,7 +48,7 @@ var whew     = "<span class='myemo whew'></span>";
 var worried  = "<span class='myemo worried'></span>";
 
 function handleText(textNode) {
-    if (textNode.nodeValue.match(/:\)\)|:\(\(|:-j|=\)\)|;\)\)|x\(|;;\)|:">|=\(\(|>:\(|>:D<|:x|:>|#:-s|:-s/i)) {
+    if (textNode.nodeValue.match(/:\)\)|:\(\(|:-j|=\)\)|;\)\)|x\(|;;\)|:">|=\(\(|>:\)|>:D<|:x|:>|#:-s|:-s/i)) {
         var parent = textNode.parentNode;
         textNode.nodeValue = textNode.nodeValue.replace(/:\)\)/g, laughing);
         textNode.nodeValue = textNode.nodeValue.replace(/:\(\(/g, crying);
@@ -59,7 +59,7 @@ function handleText(textNode) {
         textNode.nodeValue = textNode.nodeValue.replace(/;;\)/g, batting);
         textNode.nodeValue = textNode.nodeValue.replace(/:">/g, blushing);
         textNode.nodeValue = textNode.nodeValue.replace(/=\(\(/g, broken);
-        textNode.nodeValue = textNode.nodeValue.replace(/>:\(/g, devil);
+        textNode.nodeValue = textNode.nodeValue.replace(/>:\)/g, devil);
         textNode.nodeValue = textNode.nodeValue.replace(/>:D</gi, hug);
         textNode.nodeValue = textNode.nodeValue.replace(/:x/gi, love);
         textNode.nodeValue = textNode.nodeValue.replace(/:>/g, smug);
@@ -79,4 +79,22 @@ document.getElementsByTagName("head")[0].appendChild(fileref);
                
 walk(document.body);
 
-document.addEventListener('DOMNodeInserted', function() { walk(document.body) }, false);
+// select the target node for mutation observation
+var target = document.body;
+ 
+// create an observer instance
+var observer = new MutationObserver(function(mutations) { // mutations: an array of MutationRecord objects
+    mutations.forEach(function(mutation) {
+        var addedList = mutation.addedNodes;
+        for (var i = 0; i < addedList.length; ++i) {
+            var item = addedList[i];  // Calling myNodeList.item(i) isn't necessary in JavaScript
+            walk(item);
+        }
+    });    
+});
+ 
+// configuration of the observer:
+var config = { attributes: true, childList: true, characterData: true, subtree: true };
+ 
+// pass in the target node, as well as the observer options
+observer.observe(target, config);
