@@ -47,14 +47,33 @@ var smug     = "<span class='myemo smug'></span>";
 var whew     = "<span class='myemo whew'></span>";
 var worried  = "<span class='myemo worried'></span>";
 
+var bye          = "<span class='myemo bye'></span>";
+var callme       = "<span class='myemo callme'></span>";
+var clown        = "<span class='myemo clown'></span>";
+var daydreaming  = "<span class='myemo daydreaming'></span>";
+var donttell     = "<span class='myemo donttell'></span>";
+var loser        = "<span class='myemo loser'></span>";
+var nerd         = "<span class='myemo nerd'></span>";
+var notalking    = "<span class='myemo notalking'></span>";
+var phone        = "<span class='myemo phone'></span>";
+var raised       = "<span class='myemo raised'></span>";
+var sick         = "<span class='myemo sick'></span>";
+var silly        = "<span class='myemo silly'></span>";
+var sleepy       = "<span class='myemo sleepy'></span>";
+var straight     = "<span class='myemo straight'></span>";
+var talkhand     = "<span class='myemo talkhand'></span>";
+var timeout      = "<span class='myemo timeout'></span>";
+var witsend      = "<span class='myemo witsend'></span>";
+
 function handleText(textNode) {
-    if (textNode.nodeValue.match(/:\)\)|:\(\(|:-j|=\)\)|;\)\)|x\(|;;\)|:">|=\(\(|>:\)|>:D<|:x|:>|#:-s|:-s/i)) {
+    if (textNode.nodeValue.match(/:\)\)|:\(\(|:-j|=\)\)|;\)\)|x\(|;;\)|:">|=\(\(|>:\)|>:D<|:x|:>|#:-s|:-s|:-h|:-c|:O\)|8->|:-\$|L-\)|:-B|\[-\(|:\)\]|\/:\)|:-&|8-\}|I-\)|:\||=;|:-t|~X\(/i)) {
         var parent = textNode.parentNode;
         textNode.nodeValue = textNode.nodeValue.replace(/:\)\)/g, laughing);
         textNode.nodeValue = textNode.nodeValue.replace(/:\(\(/g, crying);
         textNode.nodeValue = textNode.nodeValue.replace(/:-j/g, ohgoon);
         textNode.nodeValue = textNode.nodeValue.replace(/=\)\)/g, rolling);
         textNode.nodeValue = textNode.nodeValue.replace(/;\)\)/g, hehe);
+        textNode.nodeValue = textNode.nodeValue.replace(/~X\(/gi, witsend);
         textNode.nodeValue = textNode.nodeValue.replace(/x\(/gi, angry);
         textNode.nodeValue = textNode.nodeValue.replace(/;;\)/g, batting);
         textNode.nodeValue = textNode.nodeValue.replace(/:">/g, blushing);
@@ -65,6 +84,23 @@ function handleText(textNode) {
         textNode.nodeValue = textNode.nodeValue.replace(/:>/g, smug);
         textNode.nodeValue = textNode.nodeValue.replace(/#:-S/gi, whew);
         textNode.nodeValue = textNode.nodeValue.replace(/:-s/gi, worried);
+        textNode.nodeValue = textNode.nodeValue.replace(/:-h/gi, bye);
+        textNode.nodeValue = textNode.nodeValue.replace(/:-c/gi, callme);
+        textNode.nodeValue = textNode.nodeValue.replace(/:O\)/gi, clown);
+        textNode.nodeValue = textNode.nodeValue.replace(/8->/gi, daydreaming);
+        textNode.nodeValue = textNode.nodeValue.replace(/:-\$/gi, donttell);
+        textNode.nodeValue = textNode.nodeValue.replace(/L-\)/gi, loser);
+        textNode.nodeValue = textNode.nodeValue.replace(/:-B/gi, nerd);
+        textNode.nodeValue = textNode.nodeValue.replace(/\[-\(/gi, notalking);
+        textNode.nodeValue = textNode.nodeValue.replace(/:\)\]/gi, phone);
+        textNode.nodeValue = textNode.nodeValue.replace(/\/:\)/gi, raised);
+        textNode.nodeValue = textNode.nodeValue.replace(/:-&/gi, sick);
+        textNode.nodeValue = textNode.nodeValue.replace(/8-\}/gi, silly);
+        textNode.nodeValue = textNode.nodeValue.replace(/I-\)/gi, sleepy);
+        textNode.nodeValue = textNode.nodeValue.replace(/:\|/gi, straight);
+        textNode.nodeValue = textNode.nodeValue.replace(/=;/gi, talkhand);
+        textNode.nodeValue = textNode.nodeValue.replace(/:-t/gi, timeout);        
+
         var newSpan = document.createElement('span');
         newSpan.innerHTML = textNode.nodeValue;
         parent.replaceChild(newSpan, textNode);
