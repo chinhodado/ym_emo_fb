@@ -40,3 +40,73 @@
     width: 20px;
     height: 15px;
 }
+
+.angry
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/angry.gif);
+    width: 30px;
+    height: 16px;
+}
+
+.batting
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/batting.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.blushing
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/blushing.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.broken
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/broken.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.devil
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/devil.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.hug
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/hug.gif);
+    width: 37px;
+    height: 16px;
+}
+
+.love
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/love.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.smug
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/smug.gif);
+    width: 16px;
+    height: 16px;
+}
+
+.whew
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/whew.gif);
+    width: 30px;
+    height: 16px;
+}
+
+.worried
+{
+    background-image: url(https://github.com/chinhodado/ym_emo_fb/raw/master/images/worried.gif);
+    width: 16px;
+    height: 16px;
+}
