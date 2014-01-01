@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "ym_emo_fb",
+  "description": "This extension displays Yahoo Messenger emoticons on Facebook.",
+  "version": "0.1",
+
+  "content_scripts": [
+    {
+      "matches": ["http://facebook.com/*", "http://*.facebook.com/*", "https://facebook.com/*", "https://*.facebook.com/*"],
+      "run_at": "document_end",
+      "js": ["script.js"]
+    }
+  ]
+}
