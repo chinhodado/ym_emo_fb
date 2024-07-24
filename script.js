@@ -7,13 +7,14 @@
 // @include      http://*.facebook.com/*
 // @include      https://facebook.com/*
 // @include      https://*.facebook.com/*
+// @include      https://www.messenger.com/*
 // @copyright    2013, Chin
 // @run-at       document-end
 // ==/UserScript==
 
 
-function walk(node) {      
-    var child, next;
+function walk(node) {
+    let child, next;
     switch (node.nodeType)  {
         case 1:  // Element
         case 9:  // Document
@@ -31,69 +32,69 @@ function walk(node) {
     }
 }
 
-var laughing     = "<span class='myemo laughing'></span>";
-var crying       = "<span class='myemo crying'></span>";
-var ohgoon       = "<span class='myemo ohgoon'></span>";
-var rolling      = "<span class='myemo rolling'></span>";
-var hehe         = "<span class='myemo hehe'></span>";
-var angry        = "<span class='myemo angry'></span>";
-var batting      = "<span class='myemo batting'></span>";
-var blushing     = "<span class='myemo blushing'></span>";
-var broken       = "<span class='myemo broken'></span>";
-var devil        = "<span class='myemo devil'></span>";
-var hug          = "<span class='myemo hug'></span>";
-var love         = "<span class='myemo love'></span>";
-var smug         = "<span class='myemo smug'></span>";
-var whew         = "<span class='myemo whew'></span>";
-var worried      = "<span class='myemo worried'></span>";
-var bye          = "<span class='myemo bye'></span>";
-var callme       = "<span class='myemo callme'></span>";
-var clown        = "<span class='myemo clown'></span>";
-var daydreaming  = "<span class='myemo daydreaming'></span>";
-var donttell     = "<span class='myemo donttell'></span>";
-var loser        = "<span class='myemo loser'></span>";
-var nerd         = "<span class='myemo nerd'></span>";
-var notalking    = "<span class='myemo notalking'></span>";
-var phone        = "<span class='myemo phone'></span>";
-var raised       = "<span class='myemo raised'></span>";
-var sick         = "<span class='myemo sick'></span>";
-var silly        = "<span class='myemo silly'></span>";
-var sleepy       = "<span class='myemo sleepy'></span>";
-var straight     = "<span class='myemo straight'></span>";
-var talkhand     = "<span class='myemo talkhand'></span>";
-var timeout      = "<span class='myemo timeout'></span>";
-var witsend      = "<span class='myemo witsend'></span>";
-var applause     = "<span class='myemo applause'></span>";
-var beatup       = "<span class='myemo beatup'></span>";
-var bringit      = "<span class='myemo bringit'></span>";
-var dancing      = "<span class='myemo dancing'></span>";
-var doh          = "<span class='myemo doh'></span>";
-var dontknow     = "<span class='myemo dontknow'></span>";
-var dontsee      = "<span class='myemo dontsee'></span>";
-var drooling     = "<span class='myemo drooling'></span>";
-var frustrated   = "<span class='myemo frustrated'></span>";
-var hipno        = "<span class='myemo hipno'></span>";
-var liar         = "<span class='myemo liar'></span>";
-var money        = "<span class='myemo money'></span>";
-var nail         = "<span class='myemo nail'></span>";
-var notworthy    = "<span class='myemo notworthy'></span>";
-var party        = "<span class='myemo party'></span>";
-var peace        = "<span class='myemo peace'></span>";
-var phbbt        = "<span class='myemo phbbt'></span>";
-var praying      = "<span class='myemo praying'></span>";
-var rockon       = "<span class='myemo rockon'></span>";
-var shame        = "<span class='myemo shame'></span>";
-var sigh         = "<span class='myemo sigh'></span>";
-var thinking     = "<span class='myemo thinking'></span>";
-var thumbdown    = "<span class='myemo thumbdown'></span>";
-var thumbup      = "<span class='myemo thumbup'></span>";
-var waiting      = "<span class='myemo waiting'></span>";
-var whistling    = "<span class='myemo whistling'></span>";
-var yawn         = "<span class='myemo yawn'></span>";
+const laughing     = "<span class='myemo laughing'></span>";
+const crying       = "<span class='myemo crying'></span>";
+const ohgoon       = "<span class='myemo ohgoon'></span>";
+const rolling      = "<span class='myemo rolling'></span>";
+const hehe         = "<span class='myemo hehe'></span>";
+const angry        = "<span class='myemo angry'></span>";
+const batting      = "<span class='myemo batting'></span>";
+const blushing     = "<span class='myemo blushing'></span>";
+const broken       = "<span class='myemo broken'></span>";
+const devil        = "<span class='myemo devil'></span>";
+const hug          = "<span class='myemo hug'></span>";
+const love         = "<span class='myemo love'></span>";
+const smug         = "<span class='myemo smug'></span>";
+const whew         = "<span class='myemo whew'></span>";
+const worried      = "<span class='myemo worried'></span>";
+const bye          = "<span class='myemo bye'></span>";
+const callme       = "<span class='myemo callme'></span>";
+const clown        = "<span class='myemo clown'></span>";
+const daydreaming  = "<span class='myemo daydreaming'></span>";
+const donttell     = "<span class='myemo donttell'></span>";
+const loser        = "<span class='myemo loser'></span>";
+const nerd         = "<span class='myemo nerd'></span>";
+const notalking    = "<span class='myemo notalking'></span>";
+const phone        = "<span class='myemo phone'></span>";
+const raised       = "<span class='myemo raised'></span>";
+const sick         = "<span class='myemo sick'></span>";
+const silly        = "<span class='myemo silly'></span>";
+const sleepy       = "<span class='myemo sleepy'></span>";
+const straight     = "<span class='myemo straight'></span>";
+const talkhand     = "<span class='myemo talkhand'></span>";
+const timeout      = "<span class='myemo timeout'></span>";
+const witsend      = "<span class='myemo witsend'></span>";
+const applause     = "<span class='myemo applause'></span>";
+const beatup       = "<span class='myemo beatup'></span>";
+const bringit      = "<span class='myemo bringit'></span>";
+const dancing      = "<span class='myemo dancing'></span>";
+const doh          = "<span class='myemo doh'></span>";
+const dontknow     = "<span class='myemo dontknow'></span>";
+const dontsee      = "<span class='myemo dontsee'></span>";
+const drooling     = "<span class='myemo drooling'></span>";
+const frustrated   = "<span class='myemo frustrated'></span>";
+const hipno        = "<span class='myemo hipno'></span>";
+const liar         = "<span class='myemo liar'></span>";
+const money        = "<span class='myemo money'></span>";
+const nail         = "<span class='myemo nail'></span>";
+const notworthy    = "<span class='myemo notworthy'></span>";
+const party        = "<span class='myemo party'></span>";
+const peace        = "<span class='myemo peace'></span>";
+const phbbt        = "<span class='myemo phbbt'></span>";
+const praying      = "<span class='myemo praying'></span>";
+const rockon       = "<span class='myemo rockon'></span>";
+const shame        = "<span class='myemo shame'></span>";
+const sigh         = "<span class='myemo sigh'></span>";
+const thinking     = "<span class='myemo thinking'></span>";
+const thumbdown    = "<span class='myemo thumbdown'></span>";
+const thumbup      = "<span class='myemo thumbup'></span>";
+const waiting      = "<span class='myemo waiting'></span>";
+const whistling    = "<span class='myemo whistling'></span>";
+const yawn         = "<span class='myemo yawn'></span>";
 
 function handleText(textNode) {
-    if (textNode.nodeValue.match(/:\)\)|:\(\(|:-j|=\)\)|;\)\)|x\(|;;\)|:">|=\(\(|>:\)|>:D<|:x|:>|#:-s|:-s|:-h|:-c|:O\)|8->|:-\$|L-\)|:-B|\[-\(|:\)\]|\/:\)|:-&|8-\}|I-\)|:\||=;|:-t|~X\(|=D>|b-\(|>:\/|\\:D\/|#-o|:-\?\?|X_X|=P~|:-L|@-\)|:\^o|\$-\)|:-ss|\^:\)\^|<:-P|:\)>-|>:P|\[-O<|\\m\/|\[-X|:-<|:-\?|:-q|:-bd|:-w|:-"|\(:\|/i)) {
-        var parent = textNode.parentNode;
+    if (textNode.nodeValue.match(/:\)\)|:\(\(|:-j|=\)\)|=]]|;\)\)|x\(|;;\)|:">|=\(\(|>:\)|>:D<|:x|:>|#:-s|:-s|:-h|:-c|:O\)|8->|:-\$|L-\)|:-B|\[-\(|:\)\]|\/:\)|:-&|8-\}|I-\)|:\||=;|:-t|~X\(|=D>|b-\(|>:\/|\\:D\/|#-o|:-\?\?|X_X|=P~|:-L|@-\)|:\^o|\$-\)|:-ss|\^:\)\^|<:-P|:\)>-|>:P|\[-O<|\\m\/|\[-X|:-<|:-\?|:-q|:-bd|:-w|:-"|\(:\|/i)) {
+        const parent = textNode.parentNode;
         textNode.nodeValue = textNode.nodeValue.replace(/:-ss/gi, nail);
         textNode.nodeValue = textNode.nodeValue.replace(/:-bd/gi, thumbup);
         textNode.nodeValue = textNode.nodeValue.replace(/\(:\|/gi, yawn);
@@ -101,6 +102,7 @@ function handleText(textNode) {
         textNode.nodeValue = textNode.nodeValue.replace(/:\(\(/g, crying);
         textNode.nodeValue = textNode.nodeValue.replace(/:-j/g, ohgoon);
         textNode.nodeValue = textNode.nodeValue.replace(/=\)\)/g, rolling);
+        textNode.nodeValue = textNode.nodeValue.replace(/=]]/g, rolling);
         textNode.nodeValue = textNode.nodeValue.replace(/;\)\)/g, hehe);
         textNode.nodeValue = textNode.nodeValue.replace(/~X\(/gi, witsend);
         textNode.nodeValue = textNode.nodeValue.replace(/x\(/gi, angry);
@@ -152,38 +154,32 @@ function handleText(textNode) {
         textNode.nodeValue = textNode.nodeValue.replace(/:-\?/gi, thinking);
         textNode.nodeValue = textNode.nodeValue.replace(/:-q/gi, thumbdown);        
         textNode.nodeValue = textNode.nodeValue.replace(/:-w/gi, waiting);
-        textNode.nodeValue = textNode.nodeValue.replace(/:-"/gi, whistling);        
+        textNode.nodeValue = textNode.nodeValue.replace(/:-"/gi, whistling);
 
-        var newSpan = document.createElement('span');
+        const newSpan = document.createElement('span');
         newSpan.innerHTML = textNode.nodeValue;
         parent.replaceChild(newSpan, textNode);
     }
 }
 
-var fileref=document.createElement("link");
-fileref.setAttribute("rel", "stylesheet");
-fileref.setAttribute("type", "text/css");
-fileref.setAttribute("href", "https://rawgithub.com/chinhodado/ym_emo_fb/master/emo_style.css");
-document.getElementsByTagName("head")[0].appendChild(fileref);
-               
 walk(document.body);
 
 // select the target node for mutation observation
-var target = document.body;
- 
+const target = document.body;
+
 // create an observer instance
-var observer = new MutationObserver(function(mutations) { // mutations: an array of MutationRecord objects
-    mutations.forEach(function(mutation) {
-        var addedList = mutation.addedNodes;
-        for (var i = 0; i < addedList.length; ++i) {
-            var item = addedList[i];  // Calling myNodeList.item(i) isn't necessary in JavaScript
+const observer = new MutationObserver(function (mutations) { // mutations: an array of MutationRecord objects
+    mutations.forEach(function (mutation) {
+        const addedList = mutation.addedNodes;
+        for (let i = 0; i < addedList.length; ++i) {
+            const item = addedList[i];  // Calling myNodeList.item(i) isn't necessary in JavaScript
             walk(item);
         }
-    });    
+    });
 });
- 
+
 // configuration of the observer:
-var config = { attributes: true, childList: true, characterData: true, subtree: true };
- 
+const config = {attributes: true, childList: true, characterData: true, subtree: true};
+
 // pass in the target node, as well as the observer options
 observer.observe(target, config);

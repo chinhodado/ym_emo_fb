@@ -7,9 +7,19 @@
 
   "content_scripts": [
     {
-      "matches": ["http://facebook.com/*", "http://*.facebook.com/*", "https://facebook.com/*", "https://*.facebook.com/*"],
+      "matches": [
+        "http://facebook.com/*",
+        "http://*.facebook.com/*",
+        "https://facebook.com/*",
+        "https://*.facebook.com/*",
+        "https://www.messenger.com/*"
+      ],
       "run_at": "document_end",
-      "js": ["script.js"]
+      "js": ["script.js"],
+      "css": [ "emo_style.css" ]
     }
+  ],
+  "web_accessible_resources": [
+    "images/*"
   ]
 }
