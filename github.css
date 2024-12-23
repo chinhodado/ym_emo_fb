@@ -1,0 +1,428 @@
+* {
+    font-family: monospace;
+}
+
+tr td:nth-child(3n) { /* Select every 3rd cell */
+  width: 75px;
+}
+
+.myemo
+{
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.laughing
+{
+    background-image: url('images/laughing.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.rolling
+{
+    background-image: url('images/rolling.gif');
+    width: 27px;
+    height: 16px;
+}
+
+.ohgoon
+{
+    background-image: url('images/ohgoon.gif');
+    width: 23px;
+    height: 16px;
+}
+
+.hehe
+{
+    background-image: url('images/hehe.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.crying
+{
+    background-image: url('images/crying.gif');
+    width: 20px;
+    height: 16px;
+}
+
+.angry
+{
+    background-image: url('images/angry.gif');
+    width: 30px;
+    height: 16px;
+}
+
+.batting
+{
+    background-image: url('images/batting.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.blushing
+{
+    background-image: url('images/blushing.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.broken
+{
+    background-image: url('images/broken.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.devil
+{
+    background-image: url('images/devil.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.hug
+{
+    background-image: url('images/hug.gif');
+    width: 37px;
+    height: 16px;
+}
+
+.love
+{
+    background-image: url('images/love.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.smug
+{
+    background-image: url('images/smug.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.whew
+{
+    background-image: url('images/whew.gif');
+    width: 30px;
+    height: 16px;
+}
+
+.worried
+{
+    background-image: url('images/worried.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.bye
+{
+    background-image: url('images/bye.gif');
+    width: 25px;
+    height: 16px;
+}
+
+.callme
+{
+    background-image: url('images/callme.gif');
+    width: 25px;
+    height: 16px;
+}
+
+.clown
+{
+    background-image: url('images/clown.gif');
+    width: 25px;
+    height: 16px;
+}
+
+.daydreaming
+{
+    background-image: url('images/daydreaming.gif');
+    width: 20px;
+    height: 16px;
+}
+
+.donttell
+{
+    background-image: url('images/donttell.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.loser
+{
+    background-image: url('images/loser.gif');
+    width: 21px;
+    height: 16px;
+}
+
+.nerd
+{
+    background-image: url('images/nerd.gif');
+    width: 21px;
+    height: 16px;
+}
+
+.notalking
+{
+    background-image: url('images/notalking.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.phone
+{
+    background-image: url('images/phone.gif');
+    width: 28px;
+    height: 16px;
+}
+
+.raised
+{
+    background-image: url('images/raised.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.sick
+{
+    background-image: url('images/sick.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.silly
+{
+    background-image: url('images/silly.gif');
+    width: 21px;
+    height: 16px;
+}
+
+.sleepy
+{
+    background-image: url('images/sleepy.gif');
+    width: 19px;
+    height: 16px;
+}
+
+.straight
+{
+    background-image: url('images/straight.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.talkhand
+{
+    background-image: url('images/talkhand.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.timeout
+{
+    background-image: url('images/timeout.gif');
+    width: 27px;
+    height: 16px;
+}
+
+.witsend
+{
+    background-image: url('images/witsend.gif');
+    width: 39px;
+    height: 16px;
+}
+
+.applause
+{
+    background-image: url('images/applause.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.beatup
+{
+    background-image: url('images/beatup.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.bringit
+{
+    background-image: url('images/bringit.gif');
+    width: 25px;
+    height: 16px;
+}
+
+.dancing
+{
+    background-image: url('images/dancing.gif');
+    width: 24px;
+    height: 16px;
+}
+
+.doh
+{
+    background-image: url('images/doh.gif');
+    width: 22px;
+    height: 16px;
+}
+
+.dontknow
+{
+    background-image: url('images/dontknow.gif');
+    width: 36px;
+    height: 16px;
+}
+
+.dontsee
+{
+    background-image: url('images/dontsee.gif');
+    width: 23px;
+    height: 16px;
+}
+
+.drooling
+{
+    background-image: url('images/drooling.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.frustrated
+{
+    background-image: url('images/frustrated.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.hipno
+{
+    background-image: url('images/hipno.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.liar
+{
+    background-image: url('images/liar.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.money
+{
+    background-image: url('images/money.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.nail
+{
+    background-image: url('images/nail.gif');
+    width: 32px;
+    height: 16px;
+}
+
+.notworthy
+{
+    background-image: url('images/notworthy.gif');
+    width: 29px;
+    height: 16px;
+}
+
+.party
+{
+    background-image: url('images/party.gif');
+    width: 34px;
+    height: 16px;
+}
+
+.peace
+{
+    background-image: url('images/peace.gif');
+    width: 20px;
+    height: 16px;
+}
+
+.phbbt
+{
+    background-image: url('images/phbbt.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.praying
+{
+    background-image: url('images/praying.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.rockon
+{
+    background-image: url('images/rockon.gif');
+    width: 29px;
+    height: 16px;
+}
+
+.shame
+{
+    background-image: url('images/shame.gif');
+    width: 20px;
+    height: 16px;
+}
+
+.sigh
+{
+    background-image: url('images/sigh.gif');
+    width: 22px;
+    height: 16px;
+}
+
+.thinking
+{
+    background-image: url('images/thinking.gif');
+    width: 16px;
+    height: 16px;
+}
+
+.thumbdown
+{
+    background-image: url('images/thumbdown.gif');
+    width: 25px;
+    height: 16px;
+}
+
+.thumbup
+{
+    background-image: url('images/thumbup.gif');
+    width: 35px;
+    height: 16px;
+}
+
+.waiting
+{
+    background-image: url('images/waiting.gif');
+    width: 21px;
+    height: 16px;
+}
+
+.whistling
+{
+    background-image: url('images/whistling.gif');
+    width: 20px;
+    height: 16px;
+}
+
+.yawn
+{
+    background-image: url('images/yawn.gif');
+    width: 16px;
+    height: 16px;
+}
