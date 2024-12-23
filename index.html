@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Yahoo Messenger emoticons</title>
+    <link rel="stylesheet" href="emo_style.css">
+    <script>var ymEmoFbEnv = 'browser';</script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+      * {
+        font-family: monospace;
+      }
+
+      tr td:nth-child(3n) { /* Select every 3rd cell */
+        width: 75px;
+      }
+    </style>
+</head>
+<body>
+
+<h1>About</h1>
+<p>This page shows all 119 Yahoo! Messenger emoticons (aka smileys)</p>
+<div id="content"></div>
+
+<script>
+    function createTable(objs) {
+        let s = `<table>`;
+        let i = 0;
+        for (let k in objs) {
+            if (i % 3 === 0) {
+                s += `<tr>`;
+            }
+            s += `<td class="emoji">${objs[k][1]}</td><td>${objs[k][0]}</td><td>${objs[k][1]}</td>`;
+            if (i % 3 === 2) {
+                s += `</tr>`;
+            }
+            i++;
+        }
+        s += `</table>`;
+
+        return s;
+    }
+
+    let html =
+        `<h1>Base smileys in 5.5 (2002)</h1>` + createTable(emojis.base) +
+        `<h1>Yahoo! Fighter:</h1>` + createTable(emojis.fighter) +
+        `<h1>New for Yahoo! Messenger 6.0 (2004):</h1>` + createTable(emojis.version6) +
+        `<h1>New for Yahoo! Messenger 7.0 (2005):</h1>` + createTable(emojis.version7) +
+        `<h1>New for Yahoo! Messenger 8.0 (2006):</h1>` + createTable(emojis.version8) +
+        `<h1>Yahoo! Messenger for the web (2007):</h1>` + createTable(emojis.web) +
+        `<h1>New for Yahoo! Messenger 9.0 (2008):</h1>` + createTable(emojis.version9) +
+        `<h1>New For Yahoo! Messenger 11.0 (2011):</h1>` + createTable(emojis.version11);
+
+        let div = document.getElementById('content');
+    div.innerHTML = html;
+
+    let tds = document.getElementsByClassName('emoji');
+    for (let i = 0; i < tds.length; i++) {
+        let td = tds[i];
+        walk(td);
+    }
+</script>
+</body>
