@@ -213,7 +213,16 @@ function handleText(textNode) {
 }
 
 if (ymEmoFbEnv === undefined) {
-    walk(document.body);
+    // This is slow (35ms messenger), also risk processing wrong nodes)
+    // console.time("body")
+    // walk(document.body);
+    // console.timeEnd("body");
+
+    // This is faster (0.13ms messenger), but risk breaking if FB changes their code
+    console.time("selector")
+    let nodes = document.querySelectorAll('.html-div[dir="auto"]');
+    nodes.forEach(node => {walk(node)});
+    console.timeEnd("selector")
 
     // select the target node for mutation observation
     const target = document.body;
