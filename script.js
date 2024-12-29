@@ -196,19 +196,20 @@ function handleText(textNode) {
         const parent = textNode.parentNode;
         let newTxt = textNode.nodeValue.replace(regexp, function(code) {
             let emoji = emojiMap[code.toLowerCase()];
+            let url;
             if (ymEmoFbEnv !== undefined) {
-                return `images/${emoji[0]}.gif`;
+                url = `images/${emoji[0]}.gif`;
             }
             else {
-                return chrome.runtime.getURL(`images/${emoji[0]}.gif`);
+                url = chrome.runtime.getURL(`images/${emoji[0]}.gif`);
             }
+
+            return `<img src="${url}" alt='' class='ym_emo_fb'/>`;
         });
 
-        const newImg = document.createElement("img");
-        newImg.src = newTxt;
-        newImg.alt = '';
-        newImg.classList.add('ym_emo_fb');
-        parent.replaceChild(newImg, textNode);
+        const span = document.createElement("span");
+        span.innerHTML = newTxt;
+        parent.replaceChild(span, textNode);
     }
 }
 
