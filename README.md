@@ -3,6 +3,8 @@ ym_emo_fb
 
 Displays Yahoo Messenger emoticons (aka smileys/emojis) on Facebook.
 
+Supports both Facebook and Facebook Messenger on the web.
+
 ![happy](images/happy.gif) 
 ![sad](images/sad.gif) 
 ![winking](images/winking.gif)
